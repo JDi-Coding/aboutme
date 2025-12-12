@@ -26,6 +26,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><button id="open-cockpit-btn" class="nav-button">Cockpit</button></li>
                 <li><a href="https://github.com/JDi-Coding" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></li>
             </ul>
         </nav>
@@ -102,6 +103,48 @@
         <p>&copy; 2025 JDi-Coding. End of Line.</p>
     </footer>
 </main>
+
+<div id="cockpit-modal" class="modal">
+    <div class="modal-content glass-panel">
+        <span class="close-btn">&times;</span>
+        <h2 class="section-title">Ship Controls <span class="neon-text">// COCKPIT</span></h2>
+
+        <div class="control-grid">
+            <div class="control-group">
+                <label for="speed-control" class="control-label"><i class="fas fa-gauge-high"></i> Warp Speed (Factor): <span id="current-speed">2.0</span></label>
+                <label class="slider">
+                    <input type="range" id="speed-control" class="level" min="0.1" max="10" step="0.1" value="2.0" />
+                    <i class="fas fa-rocket control-icon"></i>
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label for="density-control" class="control-label"><i class="fas fa-layer-group"></i> Star Density: <span id="current-density">300</span></label>
+                <label class="slider">
+                    <input type="range" id="density-control" class="level" min="100" max="1000" step="10" value="300" />
+                    <i class="fas fa-star control-icon"></i>
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label for="focus-control" class="control-label"><i class="fas fa-crosshairs"></i> Field of View (Z-Axis Focus): <span id="current-focus">1.0</span></label>
+                <label class="slider">
+                    <input type="range" id="focus-control" class="level" min="0.5" max="2" step="0.1" value="1.0" />
+                    <i class="fas fa-eye control-icon"></i>
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label for="nebula-intensity-control" class="control-label"><i class="fas fa-cloud-sun"></i> Nebula Intensity: <span id="current-nebula-intensity">0.20</span></label>
+                <label class="slider">
+                    <input type="range" id="nebula-intensity-control" class="level" min="0.1" max="1.0" step="0.05" value="0.2" />
+                    <i class="fas fa-meteor control-icon"></i>
+                </label>
+            </div>
+
+        </div> <button class="cy-btn reset-btn">Reset All Settings</button>
+    </div>
+</div>
 
 <script src="ressources/js/main.js"></script>
 </body>

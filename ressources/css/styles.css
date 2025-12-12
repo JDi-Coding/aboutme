@@ -1,8 +1,20 @@
-/* --- Bestehender Code (Reset, Body, Canvas) bleibt gleich --- */
+/* --- Globaler Reset und Typografie --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Exo 2', sans-serif; background-color: #050505; color: #ffffff; overflow-x: hidden; min-height: 100vh; }
-#space-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; padding-bottom: 50px;}
+
+/* --- Hintergrund Canvas --- */
+#space-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Ein sehr tiefes, fast schwarzes Lila/Blau als Basis */
+    background: radial-gradient(ellipse at bottom, #0d1117 0%, #000000 100%);
+}
+
 
 /* --- Glassmorphism --- */
 .glass-panel {
@@ -23,6 +35,23 @@ nav { display: flex; justify-content: space-between; align-items: center; flex-w
 nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
 nav a { text-decoration: none; color: #fff; font-weight: 700; transition: color 0.3s ease; text-transform: uppercase; font-size: 0.9rem; }
 nav a:hover, .github-link:hover { color: #bc13fe; }
+
+/* Nav Button Styling (Für den Cockpit-Button) */
+.nav-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+.nav-button:hover {
+    color: #bc13fe;
+}
+
 
 /* GitHub Icon Specific */
 .github-link i { font-size: 1.2rem; margin-right: 5px; }
@@ -103,9 +132,214 @@ h2 { font-size: 1.5rem; color: #ccc; margin-bottom: 20px; font-weight: 300; }
 /* --- Footer --- */
 footer { text-align: center; color: #555; font-size: 0.8rem; margin-top: 50px; padding-bottom: 20px; font-family: 'Orbitron', sans-serif; }
 
-/* Mobile Anpassungen */
+/* --- Modaler Container (Side-Panel / Pop-up) --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s;
+}
+
+/* Desktop: Side Panel Positionierung */
+.modal-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 0;
+    border-left: 2px solid #00d2ff;
+    border-top: none;
+    border-bottom: none;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: -5px 0 30px rgba(0, 210, 255, 0.3);
+
+    /* Animation für das Hereingleiten von rechts */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+}
+
+/* Zustand wenn Modal offen ist (gesteuert durch JS) */
+.modal.open{
+    display: block;
+}
+
+.modal.open .modal-content {
+    transform: translateX(0);
+}
+
+
+
+/* Close Button Positionierung */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #00d2ff;
+    font-size: 36px;
+    font-weight: bold;
+    transition: 0.3s;
+    line-height: 1;
+    cursor: pointer;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: #bc13fe;
+    text-decoration: none;
+}
+
+/* Control Grid (für Layout) */
+.control-grid {
+    /* Im Side-Panel ist 1 Spalte am besten */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* --- Slider Design --- */
+
+.control-group { margin-bottom: 5px; } /* Etwas enger im Cockpit */
+
+.control-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+}
+.control-label i { color: #bc13fe; }
+.control-label span {
+    font-family: 'Orbitron', sans-serif;
+    color: #00d2ff;
+    margin-left: auto; /* Sorgt dafür, dass der Wert rechts klebt */
+    font-size: 1.1rem;
+}
+
+.slider {
+    /* slider container */
+    --slider-width: 100%;
+    --slider-height: 12px;
+    --slider-bg: rgba(0, 210, 255, 0.1); /* Hellblaue Spur */
+    --slider-border-radius: 6px;
+    /* level */
+    --level-color: #bc13fe; /* Neon Lila Füllung */
+    /* icon */
+    --icon-margin: 10px;
+    --icon-color: #00d2ff;
+    --icon-size: 20px;
+
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse; /* Icon links, Slider rechts */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05); /* Hintergrund des Containers */
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.slider .control-icon {
+    display: inline-block;
+    color: var(--icon-color);
+    width: var(--icon-size);
+    height: auto;
+    margin-left: var(--icon-margin);
+    pointer-events: none;
+    text-shadow: 0 0 5px var(--icon-color);
+    transition: 0.3s;
+}
+
+.slider:hover .control-icon {
+    color: #fff;
+    text-shadow: 0 0 15px #fff, 0 0 8px var(--icon-color);
+}
+
+.slider .level {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--slider-width);
+    height: var(--slider-height);
+    background: var(--slider-bg);
+    overflow: hidden;
+    border-radius: var(--slider-border-radius);
+    cursor: inherit;
+    transition: box-shadow 0.3s;
+}
+
+/* Slider Thumb (Anfasser) */
+.slider .level::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff; /* Heller Anfasser */
+    border-radius: 50%;
+    cursor: pointer;
+    /* Die Box-Shadow simuliert die Füllung des Sliders */
+    box-shadow: -200px 0 0 200px var(--level-color), 0 0 10px #bc13fe;
+}
+.slider .level::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    box-shadow: -200px 0 0 200px var(--level-color), 0 0 10px #bc13fe;
+}
+
+/* --- Animationen --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* --- Mobile Anpassungen --- */
 @media (max-width: 768px) {
+    /* Header/Navi */
     h1 { font-size: 2rem; }
     nav { justify-content: center; }
     nav ul { padding-top: 10px; }
+
+    /* MODAL: Mobile Anpassung (Pop-up zentriert) */
+    .modal-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Zentrierung */
+        height: auto;
+        width: 90%;
+        max-width: 450px;
+        padding: 25px;
+        border-radius: 16px;
+        border: 2px solid #00d2ff;
+        border-top: 2px solid #00d2ff;
+        box-shadow: 0 0 40px rgba(0, 210, 255, 0.3);
+
+        /* Animation für Mobilgeräte: Pop-up */
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    /* Zustand wenn Modal offen ist (Mobile) */
+    .modal.open .modal-content {
+        transform: translate(-50%, -50%); /* Pop-up ist sofort sichtbar */
+    }
+
+    /* Close Button auf Mobile etwas zentraler platzieren */
+    .close-btn {
+        top: 10px;
+        right: 15px;
+    }
 }
