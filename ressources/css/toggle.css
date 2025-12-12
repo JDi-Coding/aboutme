@@ -1,0 +1,68 @@
+/* --- AUTOPILOT TOGGLE SWITCH STYLES --- */
+
+/* Der Hauptcontainer für den Toggle */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+
+    margin-left: auto;
+}
+
+/* Verstecken des Standard-Checkboxes */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Der eigentliche Schieber */
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: 0.4s;
+    border-radius: 34px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-round {
+    background-color: #bc13fe;
+    box-shadow: 0 0 10px #bc13fe;
+}
+
+/* btn movement on ON */
+input:checked + .slider-round:before {
+    transform: translateX(26px);
+    background-color: #fff; /* Knopf: Weiß/Leuchtend */
+}
+
+/* --- AUTOPILOT STATUS ANZEIGE --- */
+
+.control-label .status-on {
+    color: #00d2ff;
+    text-shadow: 0 0 8px #00d2ff;
+}
+
+.control-label .status-off {
+    color: #f00;
+}
+
