@@ -1,140 +1,111 @@
-/* --- Reset & Grundlegendes --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- Bestehender Code (Reset, Body, Canvas) bleibt gleich --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Exo 2', sans-serif; background-color: #050505; color: #ffffff; overflow-x: hidden; min-height: 100vh; }
+#space-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; padding-bottom: 50px;}
 
-body {
-    font-family: 'Exo 2', sans-serif;
-    background-color: #050505; /* Sehr dunkles Schwarz */
-    color: #ffffff;
-    overflow-x: hidden; /* Verhindert seitliches Scrollen */
-    height: 100vh;
-}
-
-/* --- Hintergrund Canvas --- */
-#space-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Hinter dem Inhalt */
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-}
-
-/* --- Layout Container --- */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-/* --- Glassmorphism Style (Milchglas) --- */
+/* --- Glassmorphism --- */
 .glass-panel {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     border-radius: 16px;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* --- Navigation --- */
-header {
-    padding-top: 20px;
-}
+header { padding-top: 20px; margin-bottom: 40px; }
+nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; color: #00d2ff; text-shadow: 0 0 10px rgba(0, 210, 255, 0.7); }
+nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+nav a { text-decoration: none; color: #fff; font-weight: 700; transition: color 0.3s ease; text-transform: uppercase; font-size: 0.9rem; }
+nav a:hover, .github-link:hover { color: #bc13fe; }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    color: #00d2ff; /* Cyan Neon */
-    text-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-nav a:hover {
-    color: #00d2ff;
-}
+/* GitHub Icon Specific */
+.github-link i { font-size: 1.2rem; margin-right: 5px; }
 
 /* --- Hero Section --- */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    text-align: center;
-}
+.hero { display: flex; justify-content: center; align-items: center; min-height: 70vh; text-align: center; margin-bottom: 60px; }
+.hero .content { padding: 50px 30px; max-width: 900px; border: 1px solid rgba(0, 210, 255, 0.3); }
 
-.hero .content {
-    padding: 60px 40px;
-    max-width: 800px;
-}
+.subtitle { color: #00d2ff; font-family: 'Orbitron', sans-serif; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px; }
+h1 { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 10px; line-height: 1.2; }
+h2 { font-size: 1.5rem; color: #ccc; margin-bottom: 20px; font-weight: 300; }
+.neon-text { color: #bc13fe; text-shadow: 0 0 15px rgba(188, 19, 254, 0.8); }
+.description { font-size: 1.1rem; color: #aaa; margin-bottom: 30px; }
 
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.neon-text {
-    color: #bc13fe; /* Lila Neon */
-    text-shadow: 0 0 15px rgba(188, 19, 254, 0.8);
-}
-
-p {
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-/* --- Cyber Button --- */
-.cy-btn {
-    background: transparent;
-    border: 2px solid #00d2ff;
+/* --- Skills Chips --- */
+.skills-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+.skill-chip {
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid #00d2ff;
     color: #00d2ff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    box-shadow: 0 0 5px rgba(0, 210, 255, 0.2);
+}
+
+/* --- Button --- */
+.cy-btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #bc13fe;
+    color: #bc13fe;
     padding: 12px 30px;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: 1px;
-    cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 4px;
+}
+.cy-btn:hover { background: #bc13fe; color: #fff; box-shadow: 0 0 20px #bc13fe; }
+
+/* --- Projects Section --- */
+.projects-section { padding: 20px 0; scroll-margin-top: 100px; }
+.section-title { font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom: 40px; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px; display: inline-block; }
+
+.category-group { margin-bottom: 50px; }
+.category-title { font-family: 'Orbitron', sans-serif; color: #fff; margin-bottom: 20px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
+.category-title i { color: #00d2ff; }
+
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+/* Project Cards */
+.project-card {
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 3px solid #00d2ff; /* Tech-Akzent links */
 }
 
-.cy-btn:hover {
-    background: #00d2ff;
-    color: #000;
-    box-shadow: 0 0 20px #00d2ff;
+.project-card:hover { transform: translateY(-5px); border-color: #bc13fe; box-shadow: 0 10px 40px rgba(188, 19, 254, 0.2); }
+.project-card h4 { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; margin-bottom: 10px; color: #fff; }
+.project-card p { color: #ccc; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+
+.badge { font-size: 0.7rem; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; display: inline-block; font-weight: bold; }
+.badge.professional { background: rgba(0, 210, 255, 0.2); color: #00d2ff; }
+.badge.private { background: rgba(188, 19, 254, 0.2); color: #bc13fe; }
+
+.tech-stack { display: flex; gap: 10px; margin-bottom: 20px; font-size: 0.8rem; color: #888; }
+.tech-stack span { background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 4px; }
+
+.project-link { text-decoration: none; color: #00d2ff; font-weight: bold; font-size: 0.9rem; transition: 0.3s; margin-top: auto; }
+.project-link:hover { color: #fff; text-shadow: 0 0 8px #00d2ff; }
+
+/* --- Footer --- */
+footer { text-align: center; color: #555; font-size: 0.8rem; margin-top: 50px; padding-bottom: 20px; font-family: 'Orbitron', sans-serif; }
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    nav { justify-content: center; }
+    nav ul { padding-top: 10px; }
 }

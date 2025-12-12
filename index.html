@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="ressources/css/styles.css">
 
-    <title>Galactic Portfolio</title>
+    <title>JDi-Coding | IT Specialist</title>
 </head>
 <body>
 
@@ -20,22 +22,85 @@
 <main class="container">
     <header>
         <nav class="glass-panel">
-            <div class="logo">ASTRO.DEV</div>
+            <div class="logo">JDi-CODING</div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projekte</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://github.com/JDi-Coding" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="content glass-panel">
-            <h1>Willkommen im <span class="neon-text">Nexus</span></h1>
-            <p>Ich entwickle Lösungen für die Zukunft. Code, Design und unendliche Weiten.</p>
-            <button class="cy-btn">Mission starten</button>
+            <p class="subtitle">System Status: Online</p>
+            <h1>I am <span class="neon-text">JDi-Coding</span></h1>
+            <h2>IT Specialist for Application Development</h2>
+            <p class="description">
+                Passionate Web Developer building the digital future.
+            </p>
+
+            <div class="skills-container">
+                <span class="skill-chip">PHP</span>
+                <span class="skill-chip">JS</span>
+                <span class="skill-chip">C#</span>
+                <span class="skill-chip">PYTHON</span>
+            </div>
+
+            <a href="#projects" class="cy-btn">View Mission Log</a>
         </div>
     </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Mission Log <span class="neon-text">// PROJECTS</span></h2>
+
+        <div class="category-group">
+            <h3 class="category-title"><i class="fas fa-briefcase"></i> Professional Deployment</h3>
+            <div class="project-grid">
+                <div class="project-card glass-panel">
+                    <h4>Agens Wegweiser</h4>
+                    <span class="badge professional">Work</span>
+                    <p>Development of a web application for the digitized administration of aid offers in Berlin.</p>
+                    <div class="tech-stack">
+                        <span>Web App</span>
+                        <span>Digitization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-group">
+            <h3 class="category-title"><i class="fas fa-user-astronaut"></i> Private Sector</h3>
+            <div class="project-grid">
+                <div class="project-card glass-panel">
+                    <h4>BarneyBot</h4>
+                    <span class="badge private">Private</span>
+                    <p>A custom automation bot designed for community interaction and server management.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Automation</span>
+                    </div>
+                    <a href="https://github.com/JDi-Coding/BarneyBot" target="_blank" class="project-link">Source Code <i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <div class="project-card glass-panel">
+                    <h4>PCessentials</h4>
+                    <span class="badge private">Private</span>
+                    <p>Essential utility scripts and configurations for optimizing and setting up PC environments.</p>
+                    <div class="tech-stack">
+                        <span>Scripting</span>
+                        <span>Utils</span>
+                    </div>
+                    <a href="https://github.com/JDi-Coding/PCessentials" target="_blank" class="project-link">Source Code <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 JDi-Coding. End of Line.</p>
+    </footer>
 </main>
 
 <script src="ressources/js/main.js"></script>
