@@ -429,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         currentSpeedDisplay.textContent = speed.toFixed(1);
-        currentDensityDisplay.textContent = starCount;
+        currentDensityDisplay.textContent = starCount.toFixed(1);;
         currentFocusDisplay.textContent = projectionFactor.toFixed(1);
         currentNebulaIntensityDisplay.textContent = nebulaIntensity.toFixed(2);
         currentXShiftDisplay.textContent = xShift.toFixed(2);
