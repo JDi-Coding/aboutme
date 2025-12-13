@@ -147,8 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        // --- Setter-Funktionen (Aktualisieren die internen Statusvariablen) ---
-
         setSpeed(_speed) {
             this.speed = _speed;
             speed = _speed;
