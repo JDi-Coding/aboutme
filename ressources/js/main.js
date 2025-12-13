@@ -150,30 +150,37 @@ document.addEventListener("DOMContentLoaded", () => {
         setSpeed(_speed) {
             this.speed = _speed;
             speed = _speed;
+            speedControl.value = _speed;
         }
 
         setStarCount(_starCount) {
             this.starCount = _starCount;
             starCount = _starCount;
+            densityControl.value = _starCount;
+
         }
 
         setProjectionFactor(_projectionFactor) {
             this.projectionFactor = _projectionFactor;
             projectionFactor = _projectionFactor;
+            focusControl.value = _projectionFactor;
         }
 
         setNebulaIntensity(_nebulaIntensity) {
             this.nebulaIntensity = _nebulaIntensity;
             nebulaIntensity = _nebulaIntensity;
+            nebulaIntensityControl.value = _nebulaIntensity;
         }
 
         setXShift(_xShift) {
             this.xShift = _xShift;
             xShift = _xShift;
+            xShiftControl.value = _xShift;
         }
         setYShift(_yShift) {
             this.yShift = _yShift;
             yShift = _yShift;
+            yShiftControl.value = _yShift;
         }
 
 
