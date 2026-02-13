@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let isAutoPilotActive = false;
 
     const autopilotToggle = document.getElementById('autopilot-toggle');
+    const autopilotToggleBtn = document.getElementById('autopilot-toggle-btn');
     const autopilotStatusDisplay = document.getElementById('autopilot-status');
 
     // --- DOM ELEMENTS ZUM STEUERN ---
     const modal = document.getElementById('cockpit-modal');
-    const openBtn = document.getElementById('open-cockpit-btn');
-    const closeBtn = document.querySelector('.close-btn');
     const speedControl = document.getElementById('speed-control');
     const densityControl = document.getElementById('density-control');
     const focusControl = document.getElementById('focus-control');
@@ -463,9 +462,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateControlDisplay();
 
     });
-
-    openBtn.onclick = () => { modal.classList.add('open'); };
-    closeBtn.onclick = () => { modal.classList.remove('open'); };
 
     // speed
     speedControl.addEventListener('input', () => {
