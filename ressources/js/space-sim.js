@@ -21,7 +21,7 @@ export class SpaceSim {
 		this.speed = parseFloat(controls.speed.value);
 		this.starCount = parseInt(controls.density.value);
 		this.projectionFactor = parseFloat(controls.focus.value);
-		this.nebulaIntensity = parseFloat(controls.nebula.value);
+		this.nebulaIntensity = parseFloat(controls.nebulaIntensity.value);
 
 		this.nebulaCount = 15;
 
@@ -178,14 +178,14 @@ export class SpaceSim {
 		c.speed.value = this.speed;
 		c.density.value = this.starCount;
 		c.focus.value = this.projectionFactor;
-		c.nebula.value = this.nebulaIntensity;
+		c.nebulaIntensity.value = this.nebulaIntensity;
 		c.xShift.value = this.xShift;
 		c.yShift.value = this.yShift;
 
 		c.displaySpeed.textContent = this.speed.toFixed(1);
 		c.displayDensity.textContent = this.starCount;
 		c.displayFocus.textContent = this.projectionFactor.toFixed(1);
-		c.displayNebula.textContent = this.nebulaIntensity.toFixed(2);
+		c.displayNebulaIntensity.textContent = this.nebulaIntensity.toFixed(2);
 		c.displayXShift.textContent = this.xShift.toFixed(2);
 		c.displayYShift.textContent = this.yShift.toFixed(2);
 	}

@@ -37,7 +37,40 @@
 .lcars-action-btn.orange { background: var(--lcars-orange); color: black; }
 .lcars-action-btn.blue { background: var(--lcars-light-blue); color: black; }
 
-/* Content Sections */
+/* Language Switch */
+.lang-switch {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 10px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.lang-btn {
+    background-color: var(--lcars-orange);
+    color: black;
+    border: 1px solid transparent;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.lang-btn:hover {
+    background-color: transparent;
+	border: 1px solid var(--lcars-gray);
+}
+
+.lang-btn.active {
+    background-color: var(--lcars-blue);
+    color: white;
+}
+
 .viewer-content {
     display: none;
 }
