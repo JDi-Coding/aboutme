@@ -1,3 +1,40 @@
+/* ========== Basis-Scrollbar (WebKit: Chrome, Edge, Safari) ========== */
+::-webkit-scrollbar {
+	width: 6px;              /* dünn */
+	height: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; /* clean, modern */
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(120, 120, 120, 0.4);
+	border-radius: 10px;
+	transition: width 0.2s ease, background 0.2s ease;
+	border: 2px solid transparent; /* sorgt für "floating" Look */
+	background-clip: content-box;
+}
+
+/* Hover: etwas dicker + sichtbarer */
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(120, 120, 120, 0.7);
+	border: 1px solid transparent;
+}
+
+/* Wenn der User über den Scrollbar-Bereich hovert (Container) */
+::-webkit-scrollbar:hover {
+	width: 10px;
+	height: 10px;
+}
+
+
+/* ========== Firefox Support ========== */
+* {
+	scrollbar-width: thin; /* nur: auto | thin | none */
+	scrollbar-color: rgba(120, 120, 120, 0.5) transparent;
+}
+
 /* Grid Layout */
 .lcars-grid {
     display: grid;
@@ -78,6 +115,8 @@
     overflow-y: auto;
     box-shadow: 0 0 20px rgba(255, 153, 0, 0.1);
 }
+
+.main-viewer
 
 .main-viewer button {
 
