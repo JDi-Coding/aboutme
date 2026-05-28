@@ -10,7 +10,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="ressources/css/style.css">
+    <link rel="stylesheet" href="ressources/css/variables.css">
+    <link rel="stylesheet" href="ressources/css/base.css">
+    <link rel="stylesheet" href="ressources/css/layout.css">
+    <link rel="stylesheet" href="ressources/css/components.css">
+    <link rel="stylesheet" href="ressources/css/animations.css">
 
 </head>
 <body>
@@ -33,11 +37,11 @@
     <div class="sidebar">
         <div class="deco-block"></div>
         <div class="deco-block"></div>
-        <button class="nav-btn active" onclick="loadContent('personnel')">Personnel</button>
-        <button class="nav-btn" onclick="loadContent('missions')">Missions</button>
-        <button class="nav-btn" onclick="loadContent('stellar')">Stellar Map</button>
-        <button class="nav-btn" onclick="loadContent('bridge')">Bridge</button>
-        <button class="nav-btn" onclick="loadContent('comms')">Subspace</button>
+        <button class="nav-btn active" data-section="personnel">Personnel</button>
+        <button class="nav-btn" data-section="missions">Missions</button>
+        <button class="nav-btn" data-section="stellar">Stellar Map</button>
+        <button class="nav-btn" data-section="bridge">Bridge</button>
+        <button class="nav-btn" data-section="comms">Subspace</button>
         <div class="nav-filler"></div>
         <div style="text-align: right; padding-right: 10px; color: var(--lcars-gold);">LCARS 47</div>
     </div>
@@ -169,8 +173,7 @@
     </main>
 </div>
 
-<script src="ressources/js/main.js"></script>
-<script src="ressources/js/script.js"></script>
+<script type="module" src="ressources/js/main.js"></script>
 
 </body>
 </html>
