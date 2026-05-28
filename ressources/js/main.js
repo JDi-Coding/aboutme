@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <br><br><em>Stack: Python, SQL, AI Integration(local)</em>
                     <br><br><em>${builder.t('project_status')}: Finished</em>
                 </p>
-                <button style="background:var(--lcars-light-blue); border:none; padding:5px;"><a href="https://github.com/JDi-Coding/BarneyBot" target="_blank" class="project-link">${builder.t('access_data')}</a></button>
+                <button><a href="https://github.com/JDi-Coding/BarneyBot" target="_blank" class="project-link">${builder.t('access_data')}</a></button>
             </div>
             <div class="data-card">
                 <h3>Project: PCessentials</h3>
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <br><br><em>Stack: C#, JSON, base64, winForms(.NET)</em>
                     <br><em>${builder.t('project_status')}: development</em>
                 </p>
-                <button style="background:var(--lcars-light-blue); border:none; padding:5px;"><a href="https://github.com/JDi-Coding/PCessentials" target="_blank" class="project-link">${builder.t('access_data')}</a></button>
+                <button><a href="https://github.com/JDi-Coding/PCessentials" target="_blank" class="project-link">${builder.t('access_data')}</a></button>
             </div>
         </div>
     `);

@@ -79,6 +79,23 @@
     box-shadow: 0 0 20px rgba(255, 153, 0, 0.1);
 }
 
+.main-viewer button {
+
+	border-radius: 12px;
+	border: 1px solid transparent;
+	transition: all 0.2s;
+
+}
+
+.main-viewer button:hover {
+	border-color: var(--lcars-gold);
+	background-color: transparent;
+}
+
+.data-card button {
+	background:var(--lcars-light-blue);
+}
+
 /* FOOTER */
 .footer {
     grid-column: 1 / 3;

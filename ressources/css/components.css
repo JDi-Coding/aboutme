@@ -93,13 +93,16 @@
     background: rgba(0, 102, 153, 0.1);
 }
 
-.project-link, .github-link {
+.project-link, .github-link{
     color: white;
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 12px;
-    background-color: rgba(239, 239, 239, 0.15);
     display: inline-block;
+}
+
+.github-link{
+	background-color: rgba(239, 239, 239, 0.15);
 }
 
 /* Deco Elements */
