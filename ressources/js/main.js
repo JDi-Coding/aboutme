@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="control-group">
                 <div class="control-label">${builder.t('star_density')}: <span id="current-density" class="data-val">300</span></div>
-                <input type="range" id="density-control" class="lcars-slider blue" min="100" max="1000" step="10" value="300" />
+                <input type="range" id="density-control" class="lcars-slider blue" min="100" max="10000" step="100" value="300" />
             </div>
             <div class="control-group">
                 <div class="control-label">${builder.t('z_focus')}: <span id="current-focus" class="data-val">1.0</span></div>
@@ -258,6 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
         controls.density.addEventListener('input', () => {
             const val = parseInt(controls.density.value);
             sim.starCount = val;
+			sim.initElements();
             controls.displayDensity.textContent = val;
         });
 

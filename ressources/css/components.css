@@ -25,7 +25,7 @@
 }
 
 .lcars-action-btn {
-    border: none;
+    border: 1px solid transparent;
     padding: 5px 10px;
     font-weight: bold;
     cursor: pointer;

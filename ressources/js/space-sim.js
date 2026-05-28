@@ -183,7 +183,7 @@ export class SpaceSim {
 		c.yShift.value = this.yShift;
 
 		c.displaySpeed.textContent = this.speed.toFixed(1);
-		c.displayDensity.textContent = this.starCount;
+		c.displayDensity.textContent = this.starCount.toString();
 		c.displayFocus.textContent = this.projectionFactor.toFixed(1);
 		c.displayNebulaIntensity.textContent = this.nebulaIntensity.toFixed(2);
 		c.displayXShift.textContent = this.xShift.toFixed(2);
@@ -231,7 +231,7 @@ export class AutoPilot {
 	update() {
 		const targets = {
 			speed: 0.1 + Math.random() * 10,
-			starCount: 100 + Math.floor(Math.random() * 900),
+			starCount: 100 + Math.floor(Math.random() * 9000),
 			projectionFactor: 0.5 + Math.random() * 1.5,
 			nebulaIntensity: 0.1 + Math.random() * 0.9,
 			xShift: (Math.random() * 2) - 1,
@@ -265,6 +265,17 @@ export class AutoPilot {
 				this.sim[key] =
 					startValues[key] +
 					(targets[key] - startValues[key]) * ease;
+				if (key === "starCount") {
+					const target = Math.floor(this.sim.starCount);
+					const current = this.sim.stars.length;
+
+					if (current < target) {
+						for (let i = 0; i < target - current; i++) {
+							this.sim.stars.push(this.sim.createStar());
+						}
+					}
+					else if (current > target) this.sim.stars.length = target;
+				}
 			});
 
 			this.sim.updateUI();
