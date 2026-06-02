@@ -14,8 +14,8 @@ import { TranslateService } from '@ngx-translate/core';
     }
     .lang-btn {
       background: transparent;
-      border: 2px solid var(--lcars-gold);
-      color: var(--lcars-gold);
+      border: 1px solid transparent;
+      color: black;
       font-family: 'Antonio', sans-serif;
       font-size: 0.85rem;
       font-weight: bold;
@@ -28,13 +28,16 @@ import { TranslateService } from '@ngx-translate/core';
     .lang-btn:hover {
       background: var(--lcars-gold);
       color: black;
+      text-decoration: underline;
+      border: 1px solid black;
     }
     .lang-btn.active {
       background: var(--lcars-gold);
       color: black;
+      text-decoration: underline;
     }
     .lang-sep {
-      color: var(--lcars-gold);
+      color: black;
       font-size: 0.75rem;
       opacity: 0.5;
     }
@@ -51,7 +54,12 @@ export class LangSwitcherComponent {
   currentLang: string;
 
   constructor(private translate: TranslateService) {
-    this.currentLang = translate.currentLang || translate.defaultLang || 'en';
+    this.currentLang = this.getLang();
+  }
+
+  getLang():string {
+	  console.log(this.currentLang)
+	  return localStorage.getItem('lang') || 'en'
   }
 
   setLang(lang: string): void {

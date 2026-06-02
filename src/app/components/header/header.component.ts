@@ -13,9 +13,9 @@ import { LangSwitcherComponent } from '../lang-switcher/lang-switcher.component'
         <span style="color:black; font-weight:bold; font-size: 2rem; margin-right: 10px;">01</span>
       </div>
       <div class="header-bar">
-        <span>{{ 'header.federation' | translate }}</span>
+        <span class="federation">{{ 'header.federation' | translate }}</span>
         <span id="stardate" class="stardate-display">{{ stardate$ | async }}</span>
-        <span>{{ 'header.ship' | translate }}</span>
+        <span class="ship-type">{{ 'header.ship' | translate }}</span>
         <app-lang-switcher></app-lang-switcher>
       </div>
   `,

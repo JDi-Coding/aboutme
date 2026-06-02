@@ -140,7 +140,10 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 860px) {
+	.header-bar{
+		height: 50%;
+	}
 	.lcars-grid {
 		grid-template-columns: 80px 1fr;
 	}
@@ -149,5 +152,11 @@
 	}
 	.sidebar {
 		width: 80px;
+	}
+}
+
+@media (max-width: 700px) {
+	.stardate-display, .federation{
+		display: none;
 	}
 }
