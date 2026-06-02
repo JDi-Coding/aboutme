@@ -1,0 +1,74 @@
+{
+  "header": {
+    "federation": "United Federation of Planets",
+    "ship": "USS ENTERPRISE"
+  },
+  "nav": {
+    "personnel": "Personnel",
+    "missions": "Missions",
+    "stellar": "Stellar Map",
+    "bridge": "Bridge",
+    "comms": "Subspace"
+  },
+  "personnel": {
+    "title": "Personnel File: SC-937-0176",
+    "name": "JDi-Coding",
+    "rank": "Junior Developer",
+    "assignment": "Web-Development",
+    "species": "Human",
+    "status": "Active Duty",
+    "label_name": "Name",
+    "label_rank": "Rank",
+    "label_assignment": "Assignment",
+    "label_species": "Species",
+    "label_status": "Status",
+    "summary_title": "Service Summary",
+    "summary_text": "Passionate Web Developer building the digital future."
+  },
+  "missions": {
+    "title": "Mission Logs (Portfolio)",
+    "subtitle": "Access to archived mission reports and technical projects.",
+    "access": "ACCESS DATA",
+    "project1": {
+      "title": "Project: Agens Wegweiser",
+      "desc": "Development of web application for the digitized administration of aid offers in Berlin.",
+      "stack": "Stack: php, JS, SQL, 3rd-party-integrations",
+      "status": "Status: Deployed"
+    },
+    "project2": {
+      "title": "Project: BarneyBot",
+      "desc": "A custom automation bot designed for community interaction and server management.",
+      "stack": "Stack: Python, SQL, AI Integration (local)",
+      "status": "Status: Finished"
+    },
+    "project3": {
+      "title": "Project: PCessentials",
+      "desc": "Essential utility scripts and configurations for optimizing and setting up PC environments.",
+      "stack": "Stack: C#, JSON, base64, winForms (.NET)",
+      "status": "Status: In Development"
+    }
+  },
+  "stellar": {
+    "title": "Stellar Cartography",
+    "subtitle": "Interactive astrometric data [Simulation]. Click on sectors for details.",
+    "scanning": "// LONG RANGE SENSOR SCAN IN PROGRESS //",
+    "coordinates": "Known coordinates: Sector 001 (Earth), Vulcan, Deep Space 9."
+  },
+  "bridge": {
+    "title": "ENGINEERING / NAVIGATION",
+    "warp": "Warp Factor",
+    "density": "Star Density",
+    "focus": "Z-Axis Focus",
+    "nebula": "Nebula Intensity",
+    "lateral_x": "Lateral Shift X",
+    "lateral_y": "Lateral Shift Y",
+    "autopilot": "Autopilot",
+    "online": "ONLINE",
+    "offline": "OFFLINE",
+    "engage": "ENGAGE",
+    "reset": "RESET ALL SYSTEMS"
+  },
+  "comms": {
+    "title": "Subspace Communications"
+  }
+}

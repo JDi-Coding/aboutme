@@ -28,8 +28,11 @@
             ],
             "styles": [
               "src/styles.scss",
-              "ressources/css/style.css",
-              "ressources/css/toggle.css"
+			  "src/assets/variables.css",
+			  "src/assets/base.css",
+			  "src/assets/layout.css",
+			  "src/assets/components.css",
+			  "src/assets/animations.css"
             ],
             "scripts": []
           },
@@ -76,5 +79,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

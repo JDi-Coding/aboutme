@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { AsyncPipe, NgClass } from '@angular/common';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { AudioService } from '../../services/audio.service';
 import { NavigationService } from '../../services/navigation.service';
 
 const NAV_ITEMS = [
-  { id: 'personnel', label: 'Personnel' },
-  { id: 'missions',  label: 'Missions'  },
-  { id: 'stellar',   label: 'Stellar Map'},
-  { id: 'bridge',    label: 'Bridge'    },
-  { id: 'comms',     label: 'Subspace'  },
+  { id: 'personnel', labelKey: 'nav.personnel' },
+  { id: 'missions',  labelKey: 'nav.missions'  },
+  { id: 'stellar',   labelKey: 'nav.stellar'   },
+  { id: 'bridge',    labelKey: 'nav.bridge'    },
+  { id: 'comms',     labelKey: 'nav.comms'     },
 ];
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [AsyncPipe, NgClass],
+  imports: [AsyncPipe, NgClass, TranslateModule],
   template: `
-    <div class="sidebar">
       <div class="deco-block"></div>
       <div class="deco-block"></div>
       @for (item of navItems; track item.id) {
@@ -25,12 +25,11 @@ const NAV_ITEMS = [
           class="nav-btn"
           [class.active]="(activeRoute$ | async) === item.id"
           (click)="navigate(item.id)">
-          {{ item.label }}
+          {{ item.labelKey | translate }}
         </button>
       }
       <div class="nav-filler"></div>
       <div style="text-align: right; padding-right: 10px; color: var(--lcars-gold);">LCARS 47</div>
-    </div>
   `,
 })
 export class SidebarComponent {

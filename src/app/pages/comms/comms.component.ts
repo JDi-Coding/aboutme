@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-comms',
   standalone: true,
+  imports: [TranslateModule],
   template: `
-    <h2>Subspace Communications</h2>
+    <h2>{{ 'comms.title' | translate }}</h2>
     <br>
     <a href="https://github.com/JDi-Coding" target="_blank" class="github-link">
       <i class="fab fa-github"></i> GitHub

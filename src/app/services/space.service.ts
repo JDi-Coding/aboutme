@@ -9,6 +9,7 @@ export interface SpaceState {
   xShift: number;
   yShift: number;
   autopilotActive: boolean;
+  autopilotRunning: boolean;
 }
 
 const DEFAULTS: SpaceState = {
@@ -19,6 +20,7 @@ const DEFAULTS: SpaceState = {
   xShift: 0.0,
   yShift: 0.0,
   autopilotActive: false,
+  autopilotRunning: false,
 };
 
 const NEBULA_COUNT = 15;
@@ -91,9 +93,12 @@ export class SpaceService implements OnDestroy {
     const next = { ...current, ...partial };
     this._state$.next(next);
 
+	// needed for cleaner canvas simulation
+	if(partial.autopilotRunning === undefined) partial.autopilotRunning = false;
+
     // Sync simulation vars
     if (partial.speed !== undefined) this.speed = partial.speed;
-    if (partial.starCount !== undefined) { this.starCount = partial.starCount; this.initElements(); }
+    if (partial.starCount !== undefined) { this.starCount = partial.starCount; if (!partial.autopilotRunning ) this.initElements(); }
     if (partial.projectionFactor !== undefined) this.projectionFactor = partial.projectionFactor;
     if (partial.nebulaIntensity !== undefined) this.nebulaIntensity = partial.nebulaIntensity;
     if (partial.xShift !== undefined) this.xShift = partial.xShift;
@@ -175,7 +180,7 @@ export class SpaceService implements OnDestroy {
   private autopilotUpdate(): void {
     const targets: Partial<SpaceState> = {
       speed: 0.1 + (10.0 - 0.1) * Math.random(),
-      starCount: Math.floor(100 + (1000 - 100) * Math.random()),
+      starCount: Math.floor(100 + (10000 - 100) * Math.random()),
       projectionFactor: 0.5 + (2.0 - 0.5) * Math.random(),
       nebulaIntensity: 0.1 + (1.0 - 0.1) * Math.random(),
       xShift: Math.random() * 2 - 1,
@@ -208,9 +213,24 @@ export class SpaceService implements OnDestroy {
 
       const patch: Partial<SpaceState> = {};
       for (const key of Object.keys(startValues)) {
+
         const val = startValues[key] + (endValues[key] - startValues[key]) * eased;
         (patch as Record<string, number>)[key] = val;
+		if (key === "starCount") {
+
+			  const target = Math.floor(this.starCount);
+			  const current = this.stars.length;
+
+			  if (current < target) {
+				  for (let i = 0; i < target - current; i++) {
+					  this.stars.push(new Star(this.width, this.height, STAR_COLORS, true));
+				  }
+			  }
+			  else if (current > target) this.stars.splice(target);
+
+		  }
       }
+	  patch.autopilotRunning = true;
       this.updateState(patch);
 
       if (progress < 1 && this.autopilotAnimation) {

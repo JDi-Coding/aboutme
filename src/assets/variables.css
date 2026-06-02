@@ -1,0 +1,14 @@
+:root {
+	/* Okuda LCARS Color Palette */
+	--lcars-orange: #FF9900;
+	--lcars-gold: #CC9900;
+	--lcars-red: #CC0000;
+	--lcars-light-blue: #9999FF;
+	--lcars-blue: #006699;
+	--lcars-purple: #CC99CC;
+	--lcars-black: #000000;
+	--lcars-gray: #333333;
+
+	--gap: 5px;
+	--curve-radius: 40px;
+}
