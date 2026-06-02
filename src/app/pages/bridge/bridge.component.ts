@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AsyncPipe, NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 import { SpaceService, SpaceState } from '../../services/space.service';
 
 @Component({
   selector: 'app-bridge',
   standalone: true,
-  imports: [AsyncPipe, NgClass, FormsModule],
+  imports: [AsyncPipe, NgClass, FormsModule, TranslateModule],
   template: `
     @if (state$ | async; as state) {
-      <h2 class="lcars-section-title">ENGINEERING / NAVIGATION</h2>
+      <h2 class="lcars-section-title">{{ 'bridge.title' | translate }}</h2>
       <div class="control-grid">
 
         <div class="control-group">
-          <div class="control-label">Warp Factor: <span class="data-val">{{ state.speed.toFixed(1) }}</span></div>
+          <div class="control-label">{{ 'bridge.warp' | translate }}: <span class="data-val">{{ state.speed.toFixed(1) }}</span></div>
           <input type="range" class="lcars-slider orange"
             min="0.1" max="10" step="0.1"
             [value]="state.speed"
@@ -21,7 +22,7 @@ import { SpaceService, SpaceState } from '../../services/space.service';
         </div>
 
         <div class="control-group">
-          <div class="control-label">Star Density: <span class="data-val">{{ state.starCount }}</span></div>
+          <div class="control-label">{{ 'bridge.density' | translate }}: <span class="data-val">{{ state.starCount }}</span></div>
           <input type="range" class="lcars-slider blue"
             min="100" max="1000" step="10"
             [value]="state.starCount"
@@ -29,7 +30,7 @@ import { SpaceService, SpaceState } from '../../services/space.service';
         </div>
 
         <div class="control-group">
-          <div class="control-label">Z-Axis Focus: <span class="data-val">{{ state.projectionFactor.toFixed(1) }}</span></div>
+          <div class="control-label">{{ 'bridge.focus' | translate }}: <span class="data-val">{{ state.projectionFactor.toFixed(1) }}</span></div>
           <input type="range" class="lcars-slider purple"
             min="0.5" max="2" step="0.1"
             [value]="state.projectionFactor"
@@ -37,7 +38,7 @@ import { SpaceService, SpaceState } from '../../services/space.service';
         </div>
 
         <div class="control-group">
-          <div class="control-label">Nebula Intensity: <span class="data-val">{{ state.nebulaIntensity.toFixed(2) }}</span></div>
+          <div class="control-label">{{ 'bridge.nebula' | translate }}: <span class="data-val">{{ state.nebulaIntensity.toFixed(2) }}</span></div>
           <input type="range" class="lcars-slider purple"
             min="0.1" max="1.0" step="0.05"
             [value]="state.nebulaIntensity"
@@ -45,7 +46,7 @@ import { SpaceService, SpaceState } from '../../services/space.service';
         </div>
 
         <div class="control-group">
-          <div class="control-label">Lateral Shift X: <span class="data-val">{{ state.xShift.toFixed(2) }}</span></div>
+          <div class="control-label">{{ 'bridge.lateral_x' | translate }}: <span class="data-val">{{ state.xShift.toFixed(2) }}</span></div>
           <input type="range" class="lcars-slider gold"
             min="-1.0" max="1.0" step="0.01"
             [value]="state.xShift"
@@ -53,7 +54,7 @@ import { SpaceService, SpaceState } from '../../services/space.service';
         </div>
 
         <div class="control-group">
-          <div class="control-label">Lateral Shift Y: <span class="data-val">{{ state.yShift.toFixed(2) }}</span></div>
+          <div class="control-label">{{ 'bridge.lateral_y' | translate }}: <span class="data-val">{{ state.yShift.toFixed(2) }}</span></div>
           <input type="range" class="lcars-slider gold"
             min="-1.0" max="1.0" step="0.01"
             [value]="state.yShift"
@@ -62,10 +63,10 @@ import { SpaceService, SpaceState } from '../../services/space.service';
 
         <div class="control-group toggle-group">
           <div class="control-label">
-            Autopilot:
+            {{ 'bridge.autopilot' | translate }}:
             <span class="status-tag"
               [ngClass]="state.autopilotActive ? 'status-on' : 'status-off'">
-              {{ state.autopilotActive ? 'ONLINE' : 'OFFLINE' }}
+              {{ (state.autopilotActive ? 'bridge.online' : 'bridge.offline') | translate }}
             </span>
           </div>
           <br>
@@ -73,12 +74,14 @@ import { SpaceService, SpaceState } from '../../services/space.service';
             <input style="opacity: 0;" type="checkbox"
               [checked]="state.autopilotActive"
               (change)="toggleAutopilot(state.autopilotActive)" />
-            ENGAGE
+            {{ 'bridge.engage' | translate }}
           </label>
         </div>
 
         <div class="modal-footer-actions">
-          <button class="lcars-action-btn red reset-btn" (click)="reset()">RESET ALL SYSTEMS</button>
+          <button class="lcars-action-btn red reset-btn" (click)="reset()">
+            {{ 'bridge.reset' | translate }}
+          </button>
         </div>
 
       </div>
