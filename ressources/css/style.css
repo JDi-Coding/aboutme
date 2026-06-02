@@ -1,5 +1,5 @@
 :root {
-    [cite_start]/* Okuda LCARS Farbpalette [cite: 5] */
+    /* Okuda LCARS Farbpalette */
     --lcars-orange: #FF9900;
     --lcars-gold: #CC9900;
     --lcars-red: #CC0000;
@@ -370,7 +370,7 @@ p {
 
 /* MODAL BASE */
 .modal {
-    //display: none; /* Initial versteckt */
+    /* display: none; */ /* Initial versteckt */
     position: fixed;
     z-index: 1000;
     left: 0;
