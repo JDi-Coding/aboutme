@@ -22,9 +22,9 @@ import { SpaceService, SpaceState } from '../../services/space.service';
         </div>
 
         <div class="control-group">
-          <div class="control-label">{{ 'bridge.density' | translate }}: <span class="data-val">{{ state.starCount }}</span></div>
+          <div class="control-label">{{ 'bridge.density' | translate }}: <span class="data-val">{{ state.starCount.toFixed(0) }}</span></div>
           <input type="range" class="lcars-slider blue"
-            min="100" max="1000" step="10"
+            min="100" max="10000" step="100"
             [value]="state.starCount"
             (input)="updateInt('starCount', $event)" />
         </div>
