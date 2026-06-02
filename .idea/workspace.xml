@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2b899431-67fa-4c4f-ba3a-3fa368af6455" name="Changes" comment="fix starcount display on autopilot" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="20" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JDi-Coding&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JDi-Coding/aboutme.git&quot;,
+    &quot;accountId&quot;: &quot;7069c954-3f02-4ba5-9434-be66f131e494&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.000903171707323" />
+      <entry key="MS500" value="1.429530799196467" />
+      <entry key="S2" value="3.348661028016382" />
+      <entry key="S5" value="4.713507719434921" />
+      <entry key="S10" value="5.717478846644052" />
+      <entry key="S30" value="7.371032381767225" />
+      <entry key="S60" value="8.33804379500528" />
+      <entry key="M2" value="9.723904780610477" />
+      <entry key="M5" value="12.843825996732582" />
+      <entry key="M10" value="18.040229032156876" />
+      <entry key="M15" value="24.075310404220147" />
+      <entry key="M30" value="43.63734537021255" />
+      <entry key="H1" value="77.20950895996579" />
+      <entry key="H2" value="115.60529777262512" />
+      <entry key="H4" value="146.46449626152483" />
+      <entry key="D1" value="181.6397393425608" />
+      <entry key="W1" value="188.77508710460947" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="4.694674729000512E-97" />
+      <entry key="S2" value="8.277541692190585E-25" />
+      <entry key="S5" value="2.328952069655102E-10" />
+      <entry key="S10" value="1.526090452645288E-5" />
+      <entry key="S30" value="0.024804287612393422" />
+      <entry key="S60" value="0.15749443832265017" />
+      <entry key="M2" value="0.3978810523143885" />
+      <entry key="M5" value="0.8085461716223402" />
+      <entry key="M10" value="1.5989336630092814" />
+      <entry key="M15" value="2.4832806252528616" />
+      <entry key="M30" value="4.560333474464087" />
+      <entry key="H1" value="6.609869305244563" />
+      <entry key="H2" value="8.088338802514503" />
+      <entry key="H4" value="8.982226065992506" />
+      <entry key="D1" value="9.821009239260839" />
+      <entry key="W1" value="9.974189999438902" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9871117371588877" />
+      <entry key="MS500" value="1.4247477097461148" />
+      <entry key="S2" value="3.345198577802344" />
+      <entry key="S5" value="4.71149113573744" />
+      <entry key="S10" value="5.716285016934954" />
+      <entry key="S30" value="7.394121641267021" />
+      <entry key="S60" value="8.49068891351726" />
+      <entry key="M2" value="10.11385956534537" />
+      <entry key="M5" value="13.643214331226737" />
+      <entry key="M10" value="19.62866634638805" />
+      <entry key="M15" value="26.54685619987558" />
+      <entry key="M30" value="48.18490915584437" />
+      <entry key="H1" value="83.80845428210766" />
+      <entry key="H2" value="123.68611999648516" />
+      <entry key="H4" value="155.44224724811252" />
+      <entry key="D1" value="191.45987881773283" />
+      <entry key="W1" value="198.74914943496353" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.5.3/bin/php" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3ELSTZpsf8l44WJMHjzdt7Xg6PB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "feat/angular",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/jason/Repos/aboutme",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.24374.185" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.24374.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b899431-67fa-4c4f-ba3a-3fa368af6455" name="Changes" comment="" />
+      <created>1779956364759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779956364759</updated>
+      <workItem from="1779956365770" duration="716000" />
+      <workItem from="1779957228065" duration="2092000" />
+      <workItem from="1779960164837" duration="9569000" />
+      <workItem from="1780386119452" duration="298000" />
+    </task>
+    <task id="LOCAL-00001" summary="structure change1">
+      <option name="closed" value="true" />
+      <created>1779963943027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779963943027</updated>
+    </task>
+    <task id="LOCAL-00002" summary="structure change2">
+      <option name="closed" value="true" />
+      <created>1779966260163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779966260163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="style 1">
+      <option name="closed" value="true" />
+      <created>1779967108931</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779967108931</updated>
+    </task>
+    <task id="LOCAL-00004" summary="style 2 scrollbar">
+      <option name="closed" value="true" />
+      <created>1779967636918</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779967636918</updated>
+    </task>
+    <task id="LOCAL-00005" summary="-">
+      <option name="closed" value="true" />
+      <created>1779967669676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779967669676</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix starcount display on autopilot">
+      <option name="closed" value="true" />
+      <created>1779969457921</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779969457921</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="structure change1" />
+    <MESSAGE value="structure change2" />
+    <MESSAGE value="style 1" />
+    <MESSAGE value="style 2 scrollbar" />
+    <MESSAGE value="-" />
+    <MESSAGE value="fix starcount display on autopilot" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix starcount display on autopilot" />
+  </component>
+</project>
