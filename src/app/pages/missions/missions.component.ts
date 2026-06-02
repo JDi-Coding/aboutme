@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
           <br><br><em>Stack: Python, SQL, AI Integration (local)</em>
           <br><br><em>Status: Finished</em>
         </p>
-        <button style="background:var(--lcars-light-blue); border:none; padding:5px;">
+        <button>
           <a href="https://github.com/JDi-Coding/BarneyBot" target="_blank" class="project-link">ACCESS DATA</a>
         </button>
       </div>
@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
           <br><br><em>Stack: C#, JSON, base64, winForms (.NET)</em>
           <br><em>Status: development</em>
         </p>
-        <button style="background:var(--lcars-light-blue); border:none; padding:5px;">
+        <button>
           <a href="https://github.com/JDi-Coding/PCessentials" target="_blank" class="project-link">ACCESS DATA</a>
         </button>
       </div>

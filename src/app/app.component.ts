@@ -13,9 +13,9 @@ import { NavigationService } from './services/navigation.service';
     <app-space-canvas></app-space-canvas>
 
     <div class="lcars-grid">
-      <app-header></app-header>
+      <app-header class="header-top"></app-header>
 
-      <app-sidebar></app-sidebar>
+      <app-sidebar class="sidebar"></app-sidebar>
 
       <main class="main-viewer">
         <div class="viewer-content-wrapper">

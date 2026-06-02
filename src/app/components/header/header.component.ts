@@ -7,7 +7,6 @@ import { StardateService } from '../../services/stardate.service';
   standalone: true,
   imports: [AsyncPipe],
   template: `
-    <div class="header-top">
       <div class="lcars-elbow">
         <span style="color:black; font-weight:bold; font-size: 2rem; margin-right: 10px;">01</span>
       </div>
@@ -16,7 +15,6 @@ import { StardateService } from '../../services/stardate.service';
         <span id="stardate" class="stardate-display">{{ stardate$ | async }}</span>
         <span>USS ENTERPRISE</span>
       </div>
-    </div>
   `,
 })
 export class HeaderComponent {

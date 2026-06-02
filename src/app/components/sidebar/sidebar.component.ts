@@ -17,7 +17,6 @@ const NAV_ITEMS = [
   standalone: true,
   imports: [AsyncPipe, NgClass],
   template: `
-    <div class="sidebar">
       <div class="deco-block"></div>
       <div class="deco-block"></div>
       @for (item of navItems; track item.id) {
@@ -30,7 +29,6 @@ const NAV_ITEMS = [
       }
       <div class="nav-filler"></div>
       <div style="text-align: right; padding-right: 10px; color: var(--lcars-gold);">LCARS 47</div>
-    </div>
   `,
 })
 export class SidebarComponent {
