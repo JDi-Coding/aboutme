@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SpaceCanvasComponent } from './components/space-canvas/space-canvas.component';
@@ -13,9 +14,9 @@ import { NavigationService } from './services/navigation.service';
     <app-space-canvas></app-space-canvas>
 
     <div class="lcars-grid">
-      <app-header></app-header>
+      <app-header class="header-top"></app-header>
 
-      <app-sidebar></app-sidebar>
+      <app-sidebar class="sidebar"></app-sidebar>
 
       <main class="main-viewer">
         <div class="viewer-content-wrapper">
@@ -26,8 +27,16 @@ import { NavigationService } from './services/navigation.service';
   `,
 })
 export class AppComponent implements OnInit {
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService,
+    private translate: TranslateService,
+  ) {}
 
-  // NavigationService must be injected in root to start listening to Router events immediately
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Restore last chosen language, default to 'en'
+    const saved = localStorage.getItem('lang') ?? 'en';
+    this.translate.addLangs(['en', 'de']);
+    this.translate.setDefaultLang('en');
+    this.translate.use(saved);
+  }
 }

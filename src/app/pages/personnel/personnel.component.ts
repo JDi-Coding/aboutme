@@ -1,26 +1,28 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-personnel',
   standalone: true,
+  imports: [TranslateModule],
   template: `
-    <h2>Personnel File: SC-937-0176</h2>
+    <h2>{{ 'personnel.title' | translate }}</h2>
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
       <div style="width: 150px; height: 150px; background: var(--lcars-blue); display: flex; align-items: center; justify-content: center; color: black; font-weight: bold;">
         [IMG ID]
       </div>
       <div>
         <p>
-          <strong>Name:</strong> JDi-Coding <br>
-          <strong>Rank:</strong> Junior Developer<br>
-          <strong>Assignment:</strong> Web-Development <br>
-          <strong>Species:</strong> Human<br>
-          <strong>Status:</strong> Active Duty
+          <strong>{{ 'personnel.label_name' | translate }}:</strong> {{ 'personnel.name' | translate }}<br>
+          <strong>{{ 'personnel.label_rank' | translate }}:</strong> {{ 'personnel.rank' | translate }}<br>
+          <strong>{{ 'personnel.label_assignment' | translate }}:</strong> {{ 'personnel.assignment' | translate }}<br>
+          <strong>{{ 'personnel.label_species' | translate }}:</strong> {{ 'personnel.species' | translate }}<br>
+          <strong>{{ 'personnel.label_status' | translate }}:</strong> {{ 'personnel.status' | translate }}
         </p>
       </div>
     </div>
-    <h3>Service Summary</h3>
-    <p>Passionate Web Developer building the digital future.</p>
+    <h3>{{ 'personnel.summary_title' | translate }}</h3>
+    <p>{{ 'personnel.summary_text' | translate }}</p>
     <p class="skills-container">
       <span>PHP</span>
       <span>JS</span>

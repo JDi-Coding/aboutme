@@ -1,0 +1,74 @@
+{
+  "header": {
+    "federation": "Vereinte Föderation der Planeten",
+    "ship": "USS ENTERPRISE"
+  },
+  "nav": {
+    "personnel": "Personal",
+    "missions": "Missionen",
+    "stellar": "Sternenkarte",
+    "bridge": "Brücke",
+    "comms": "Subraum"
+  },
+  "personnel": {
+    "title": "Personalakte: SC-937-0176",
+    "name": "JDi-Coding",
+    "rank": "Junior-Entwickler",
+    "assignment": "Web-Entwicklung",
+    "species": "Mensch",
+    "status": "Im aktiven Dienst",
+    "label_name": "Name",
+    "label_rank": "Rang",
+    "label_assignment": "Einsatz",
+    "label_species": "Spezies",
+    "label_status": "Status",
+    "summary_title": "Dienstübersicht",
+    "summary_text": "Leidenschaftlicher Webentwickler, der die digitale Zukunft gestaltet."
+  },
+  "missions": {
+    "title": "Missionsberichte (Portfolio)",
+    "subtitle": "Zugriff auf archivierte Missionsberichte und technische Projekte.",
+    "access": "DATEN ABRUFEN",
+    "project1": {
+      "title": "Projekt: Agens Wegweiser",
+      "desc": "Entwicklung einer Webanwendung zur digitalisierten Verwaltung von Hilfsangeboten in Berlin.",
+      "stack": "Stack: php, JS, SQL, Drittanbieter-Integrationen",
+      "status": "Status: Im Einsatz"
+    },
+    "project2": {
+      "title": "Projekt: BarneyBot",
+      "desc": "Ein individueller Automatisierungsbot für Community-Interaktion und Server-Management.",
+      "stack": "Stack: Python, SQL, KI-Integration (lokal)",
+      "status": "Status: Abgeschlossen"
+    },
+    "project3": {
+      "title": "Projekt: PCessentials",
+      "desc": "Nützliche Skripte und Konfigurationen zur Optimierung und Einrichtung von PC-Umgebungen.",
+      "stack": "Stack: C#, JSON, base64, winForms (.NET)",
+      "status": "Status: In Entwicklung"
+    }
+  },
+  "stellar": {
+    "title": "Stellare Kartographie",
+    "subtitle": "Interaktive astrometrische Daten [Simulation]. Auf Sektoren klicken für Details.",
+    "scanning": "// LANGSTRECKEN-SENSORSCAN IN PROGRESS //",
+    "coordinates": "Bekannte Koordinaten: Sektor 001 (Erde), Vulkan, Deep Space 9."
+  },
+  "bridge": {
+    "title": "TECHNIK / NAVIGATION",
+    "warp": "Warpfaktor",
+    "density": "Sterndichte",
+    "focus": "Z-Achsen-Fokus",
+    "nebula": "Nebelintensität",
+    "lateral_x": "Lateralversatz X",
+    "lateral_y": "Lateralversatz Y",
+    "autopilot": "Autopilot",
+    "online": "ONLINE",
+    "offline": "OFFLINE",
+    "engage": "AKTIVIEREN",
+    "reset": "ALLE SYSTEME ZURÜCKSETZEN"
+  },
+  "comms": {
+    "title": "Subraum-Kommunikation"
+  }
+}
