@@ -33,7 +33,7 @@ interface MissionView {
             <span class="timeline-node" [ngClass]="mission.statusClass">{{ mission.year }}</span>
           </div>
           <div class="data-card">
-            <span class="mission-status" [ngClass]="mission.statusClass">{{ mission.statusLabel }}</span>
+            <p class="mission-status" [ngClass]="mission.statusClass">{{ mission.statusLabel }}</p>
             <h3>{{ mission.title }}</h3>
             <p>{{ mission.desc }}</p>
             <p class="skills-container">
