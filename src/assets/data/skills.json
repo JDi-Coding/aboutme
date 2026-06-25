@@ -1,0 +1,19 @@
+{
+  "skills": {
+    "php": "PHP",
+    "js": "JS",
+    "csharp": "C#",
+    "python": "Python",
+    "sql": "SQL",
+    "json": "JSON",
+    "base64": "base64",
+    "winforms": "winForms (.NET)",
+    "thirdparty": { "en": "3rd-party integrations", "de": "Drittanbieter-Integrationen" },
+    "ai-local": { "en": "AI Integration (local)", "de": "KI-Integration (lokal)" }
+  },
+  "statuses": {
+    "deployed": { "class": "status-deployed", "en": "Deployed", "de": "Im Einsatz" },
+    "finished": { "class": "status-finished", "en": "Finished", "de": "Abgeschlossen" },
+    "in-development": { "class": "status-in-development", "en": "In Development", "de": "In Entwicklung" }
+  }
+}
