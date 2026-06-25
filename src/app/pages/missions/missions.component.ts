@@ -22,8 +22,8 @@ import { TranslateModule } from '@ngx-translate/core';
           <br><br><em>{{ 'missions.project2.stack' | translate }}</em>
           <br><br><em>{{ 'missions.project2.status' | translate }}</em>
         </p>
-        <button>
-          <a href="https://github.com/JDi-Coding/BarneyBot" target="_blank" class="project-link">
+        <button class="project-link">
+          <a href="https://github.com/JDi-Coding/BarneyBot" target="_blank" >
             {{ 'missions.access' | translate }}
           </a>
         </button>
@@ -34,8 +34,8 @@ import { TranslateModule } from '@ngx-translate/core';
           <br><br><em>{{ 'missions.project3.stack' | translate }}</em>
           <br><em>{{ 'missions.project3.status' | translate }}</em>
         </p>
-        <button>
-          <a href="https://github.com/JDi-Coding/PCessentials" target="_blank" class="project-link">
+        <button class="project-link">
+          <a href="https://github.com/JDi-Coding/PCessentials" target="_blank" >
             {{ 'missions.access' | translate }}
           </a>
         </button>
