@@ -31,9 +31,21 @@
       "en": "Development of web application for the digitized administration of aid offers in Berlin.",
       "de": "Entwicklung einer Webanwendung zur digitalisierten Verwaltung von Hilfsangeboten in Berlin."
     },
-    "skills": ["php", "js", "sql", "thirdparty"],
+    "skills": ["php", "js", "sql"],
     "status": "finished",
     "repo": null
+  },
+  {
+	"id": "agens",
+	"year": "2025",
+	"title": { "en": "Project: Agens Wegweiser", "de": "Projekt: Agens Wegweiser" },
+	"desc": {
+	  "en": "Development of a website to display offers of assistance in Berlin",
+	  "de": "Entwicklung einer Website zur Anzeige von Hilfsangeboten in Berlin."
+	},
+	"skills": ["php", "js", "sql", "thirdparty"],
+	"status": "finished",
+	"repo": null
   },
   {
 	"id": "facilioo",
