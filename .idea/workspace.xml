@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b899431-67fa-4c4f-ba3a-3fa368af6455" name="Changes" comment=" fix/ lang and responsive">
+      <change afterPath="$PROJECT_DIR$/src/app/services/missions.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/data/missions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/data/skills.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/bridge/bridge.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/bridge/bridge.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/space.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/space.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/missions/missions.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/missions/missions.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,13 +23,13 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="20" />
+    <option name="cachedIndexableFilesCount" value="51" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feat/style" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,73 +40,83 @@
     &quot;assignee&quot;: &quot;JDi-Coding&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/JDi-Coding/aboutme.git&quot;,
-    &quot;accountId&quot;: &quot;7069c954-3f02-4ba5-9434-be66f131e494&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JDi-Coding/aboutme.git",
+    "accountId": "7069c954-3f02-4ba5-9434-be66f131e494"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "JDi-Coding",
+    "repository": "aboutme"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.03291308994029E-155" />
-      <entry key="S2" value="2.8347737517755494E-39" />
-      <entry key="S5" value="4.932037707994144E-16" />
-      <entry key="S10" value="3.917865388250344E-8" />
-      <entry key="S30" value="0.0102678956110939" />
-      <entry key="S60" value="0.26926456824861655" />
-      <entry key="M2" value="1.6076562948903321" />
-      <entry key="M5" value="6.532951378327371" />
-      <entry key="M10" value="15.006439824093567" />
-      <entry key="M15" value="23.745925616052904" />
-      <entry key="M30" value="48.56771129984405" />
-      <entry key="H1" value="90.96613645112909" />
-      <entry key="H2" value="151.23562872188657" />
-      <entry key="H4" value="212.18396436642297" />
-      <entry key="D1" value="296.5477709113569" />
-      <entry key="W1" value="315.65214695588145" />
+      <entry key="MS100" value="1.0000300974336087" />
+      <entry key="MS500" value="1.124666773104651" />
+      <entry key="S2" value="1.6540832569539368" />
+      <entry key="S5" value="2.1363270145833124" />
+      <entry key="S10" value="2.4705987890902597" />
+      <entry key="S30" value="2.7947713796616185" />
+      <entry key="S60" value="2.896809397755494" />
+      <entry key="M2" value="3.248986331854379" />
+      <entry key="M5" value="7.947048974486037" />
+      <entry key="M10" value="16.135497259009757" />
+      <entry key="M15" value="21.894878502603554" />
+      <entry key="M30" value="37.188586694875504" />
+      <entry key="H1" value="72.30299066213824" />
+      <entry key="H2" value="136.13075290541758" />
+      <entry key="H4" value="212.1100734274497" />
+      <entry key="D1" value="331.75823976231635" />
+      <entry key="W1" value="360.8355992808883" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000000002" />
-      <entry key="S10" value="1.0000000143536734" />
-      <entry key="S30" value="1.0050646512318948" />
-      <entry key="S60" value="1.1513843283940004" />
-      <entry key="M2" value="1.974785436666314" />
-      <entry key="M5" value="4.781497593780438" />
-      <entry key="M10" value="7.987235149520188" />
-      <entry key="M15" value="10.375683409698006" />
-      <entry key="M30" value="15.674551320108321" />
-      <entry key="H1" value="22.286474961326903" />
-      <entry key="H2" value="28.872139497770103" />
-      <entry key="H4" value="33.94360184595083" />
-      <entry key="D1" value="39.64814761755265" />
-      <entry key="W1" value="40.80195929205475" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="7.339834418930335E-290" />
+      <entry key="S10" value="2.7092129169996024E-145" />
+      <entry key="S30" value="6.503418607738247E-49" />
+      <entry key="S60" value="9.261773781438393E-25" />
+      <entry key="M2" value="1.7711561170895687E-12" />
+      <entry key="M5" value="7.25535576100121E-5" />
+      <entry key="M10" value="0.031113140922573227" />
+      <entry key="M15" value="0.25687093633266345" />
+      <entry key="M30" value="2.4662905941040236" />
+      <entry key="H1" value="8.840278480123487" />
+      <entry key="H2" value="18.18407648826868" />
+      <entry key="H4" value="26.937920422742515" />
+      <entry key="D1" value="38.14965297937712" />
+      <entry key="W1" value="40.57800471245721" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="6.65065606284335E-7" />
-      <entry key="MS500" value="0.058153103606438446" />
-      <entry key="S2" value="0.49106979763169567" />
-      <entry key="S5" value="0.7524147311230712" />
-      <entry key="S10" value="0.8674184795698513" />
-      <entry key="S30" value="0.9687134978887235" />
-      <entry key="S60" value="1.3926530853937351" />
-      <entry key="M2" value="3.555501158670651" />
-      <entry key="M5" value="11.282886988042616" />
-      <entry key="M10" value="22.962854303421462" />
-      <entry key="M15" value="34.092755561154306" />
-      <entry key="M30" value="64.21815461498115" />
-      <entry key="H1" value="113.23360482042224" />
-      <entry key="H2" value="180.09401691900902" />
-      <entry key="H4" value="246.11877906580446" />
-      <entry key="D1" value="336.19405137565167" />
-      <entry key="W1" value="356.4538271154123" />
+      <entry key="MS100" value="0.9395500632115377" />
+      <entry key="MS500" value="1.109870934549687" />
+      <entry key="S2" value="1.6472274269271387" />
+      <entry key="S5" value="2.131622935237463" />
+      <entry key="S10" value="2.4674456676219303" />
+      <entry key="S30" value="2.793447112484032" />
+      <entry key="S60" value="2.896104107872975" />
+      <entry key="M2" value="3.248595883000129" />
+      <entry key="M5" value="7.946804298234641" />
+      <entry key="M10" value="16.166193356064532" />
+      <entry key="M15" value="22.150777844710536" />
+      <entry key="M30" value="39.65091029576058" />
+      <entry key="H1" value="81.13562590799816" />
+      <entry key="H2" value="154.30611098095937" />
+      <entry key="H4" value="239.04098979856764" />
+      <entry key="D1" value="369.90609081349487" />
+      <entry key="W1" value="401.41332562276324" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.5.3/bin/php" />
@@ -119,11 +134,12 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feat/structure-update",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/jason/Repos/aboutme",
     "node.js.detected.package.eslint": "true",
@@ -144,8 +160,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.24374.185" />
-        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.24374.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
       </set>
     </attachedChunks>
   </component>
@@ -160,6 +176,7 @@
       <workItem from="1779957228065" duration="2092000" />
       <workItem from="1779960164837" duration="9569000" />
       <workItem from="1780386119452" duration="298000" />
+      <workItem from="1782376383475" duration="4783000" />
     </task>
     <task id="LOCAL-00001" summary="structure change1">
       <option name="closed" value="true" />

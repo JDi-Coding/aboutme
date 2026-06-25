@@ -1,0 +1,50 @@
+[
+  {
+	"id": "barneybot",
+	"year": "2023",
+	"title": { "en": "Project: BarneyBot", "de": "Projekt: BarneyBot" },
+	"desc": {
+	  "en": "A custom automation bot designed for community interaction and server management.",
+	  "de": "Ein individueller Automatisierungsbot für Community-Interaktion und Server-Management."
+	},
+	"skills": ["Python", "sql", "ai-local"],
+	"status": "finished",
+	"repo": "https://github.com/JDi-Coding/BarneyBot"
+  },
+  {
+	"id": "pcessentials",
+	"year": "2023",
+	"title": { "en": "Project: PCessentials", "de": "Projekt: PCessentials" },
+	"desc": {
+	  "en": "Essential utility scripts and configurations for optimizing and setting up PC environments.",
+	  "de": "Nützliche Skripte und Konfigurationen zur Optimierung und Einrichtung von PC-Umgebungen."
+	},
+	"skills": ["csharp", "json", "base64", "winforms"],
+	"status": "finished",
+	"repo": "https://github.com/JDi-Coding/PCessentials"
+  },
+  {
+    "id": "agens",
+    "year": "2024",
+    "title": { "en": "Project: Agens Wegweiser", "de": "Projekt: Agens Wegweiser" },
+    "desc": {
+      "en": "Development of web application for the digitized administration of aid offers in Berlin.",
+      "de": "Entwicklung einer Webanwendung zur digitalisierten Verwaltung von Hilfsangeboten in Berlin."
+    },
+    "skills": ["php", "js", "sql", "thirdparty"],
+    "status": "finished",
+    "repo": null
+  },
+  {
+	"id": "facilioo",
+	"year": "2025",
+	"title": { "en": "Project: facilioo Web", "de": "Projekt: facilioo Web" },
+	"desc": {
+	  "en": "Development of web application für property managers",
+	  "de": "Entwicklung einer Webanwendung für Hausverwaltungen"
+	},
+	"skills": ["php", "js", "sql", "thirdparty"],
+	"status": "in-development",
+	"repo": null
+  }
+]

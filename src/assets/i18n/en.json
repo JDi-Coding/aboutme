@@ -29,24 +29,7 @@
     "title": "Mission Logs (Portfolio)",
     "subtitle": "Access to archived mission reports and technical projects.",
     "access": "ACCESS DATA",
-    "project1": {
-      "title": "Project: Agens Wegweiser",
-      "desc": "Development of web application for the digitized administration of aid offers in Berlin.",
-      "stack": "Stack: php, JS, SQL, 3rd-party-integrations",
-      "status": "Status: Deployed"
-    },
-    "project2": {
-      "title": "Project: BarneyBot",
-      "desc": "A custom automation bot designed for community interaction and server management.",
-      "stack": "Stack: Python, SQL, AI Integration (local)",
-      "status": "Status: Finished"
-    },
-    "project3": {
-      "title": "Project: PCessentials",
-      "desc": "Essential utility scripts and configurations for optimizing and setting up PC environments.",
-      "stack": "Stack: C#, JSON, base64, winForms (.NET)",
-      "status": "Status: In Development"
-    }
+    "classified": "CLASSIFIED"
   },
   "stellar": {
     "title": "Stellar Cartography",
