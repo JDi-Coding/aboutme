@@ -29,24 +29,7 @@
     "title": "Missionsberichte (Portfolio)",
     "subtitle": "Zugriff auf archivierte Missionsberichte und technische Projekte.",
     "access": "DATEN ABRUFEN",
-    "project1": {
-      "title": "Projekt: Agens Wegweiser",
-      "desc": "Entwicklung einer Webanwendung zur digitalisierten Verwaltung von Hilfsangeboten in Berlin.",
-      "stack": "Stack: php, JS, SQL, Drittanbieter-Integrationen",
-      "status": "Status: Im Einsatz"
-    },
-    "project2": {
-      "title": "Projekt: BarneyBot",
-      "desc": "Ein individueller Automatisierungsbot für Community-Interaktion und Server-Management.",
-      "stack": "Stack: Python, SQL, KI-Integration (lokal)",
-      "status": "Status: Abgeschlossen"
-    },
-    "project3": {
-      "title": "Projekt: PCessentials",
-      "desc": "Nützliche Skripte und Konfigurationen zur Optimierung und Einrichtung von PC-Umgebungen.",
-      "stack": "Stack: C#, JSON, base64, winForms (.NET)",
-      "status": "Status: In Entwicklung"
-    }
+    "classified": "VERTRAULICH"
   },
   "stellar": {
     "title": "Stellare Kartographie",
