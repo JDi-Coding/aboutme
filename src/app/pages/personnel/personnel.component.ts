@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   template: `
-    <h2>{{ 'personnel.title' | translate }}</h2>
+    <h1>{{ 'personnel.title' | translate }}</h1>
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
       <div style="width: 150px; height: 150px; background: var(--lcars-blue); display: flex; align-items: center; justify-content: center; color: black; font-weight: bold;">
         [IMG ID]

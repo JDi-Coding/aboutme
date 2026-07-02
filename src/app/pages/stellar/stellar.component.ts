@@ -6,10 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   template: `
-    <h2>{{ 'stellar.title' | translate }}</h2>
+    <h1>{{ 'stellar.title' | translate }}</h1>
     <p>{{ 'stellar.subtitle' | translate }}</p>
     <div style="width: 100%; height: 300px; border: 1px dashed var(--lcars-light-blue); display: flex; align-items: center; justify-content: center;">
-      <span style="color: var(--lcars-red); animation: blink 1s infinite;">
+      <span class="blink-text">
         {{ 'stellar.scanning' | translate }}
       </span>
     </div>

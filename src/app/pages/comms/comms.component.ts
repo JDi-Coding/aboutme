@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   template: `
-    <h2>{{ 'comms.title' | translate }}</h2>
+    <h1>{{ 'comms.title' | translate }}</h1>
     <br>
     <a href="https://github.com/JDi-Coding" target="_blank" class="github-link">
       <i class="fab fa-github"></i> GitHub
