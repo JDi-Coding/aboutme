@@ -24,7 +24,7 @@ interface MissionView {
   standalone: true,
   imports: [TranslateModule, NgClass],
   template: `
-    <h2>{{ 'missions.title' | translate }}</h2>
+    <h1>{{ 'missions.title' | translate }}</h1>
     <p>{{ 'missions.subtitle' | translate }}</p>
     <div class="mission-timeline">
       @for (mission of missions; track mission.title) {

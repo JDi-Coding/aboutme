@@ -10,7 +10,7 @@ import { SpaceService, SpaceState } from '../../services/space.service';
   imports: [AsyncPipe, NgClass, FormsModule, TranslateModule],
   template: `
     @if (state$ | async; as state) {
-      <h2 class="lcars-section-title">{{ 'bridge.title' | translate }}</h2>
+      <h1 class="lcars-section-title">{{ 'bridge.title' | translate }}</h1>
       <div class="control-grid">
 
         <div class="control-group">

@@ -9,6 +9,11 @@
 	--lcars-black: #000000;
 	--lcars-gray: #333333;
 
+	/* Accessible text variants (WCAG AA on black background) */
+	--lcars-red-bright: #FF4444;
+	--lcars-green-bright: #33CC33;
+	--lcars-gray-light: #999999;
+
 	--gap: 5px;
 	--curve-radius: 40px;
 }

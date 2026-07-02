@@ -5,7 +5,7 @@
 }
 
 .blink-text {
-	color: var(--lcars-red);
+	color: var(--lcars-red-bright);
 	animation: blink 1s infinite;
 }
 

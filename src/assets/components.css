@@ -219,16 +219,16 @@
 .timeline-node.status-deployed,
 .mission-status.status-deployed { color: var(--lcars-light-blue); border-color: var(--lcars-light-blue); }
 .timeline-node.status-finished,
-.mission-status.status-finished { color: green; border-color: green; }
+.mission-status.status-finished { color: var(--lcars-green-bright); border-color: var(--lcars-green-bright); }
 .timeline-node.status-in-development,
 .mission-status.status-in-development { color: var(--lcars-orange); border-color: var(--lcars-orange); }
 
 .classified {
 	display: inline-block;
 	padding: 8px 15px;
-	border: 1px solid var(--lcars-red);
+	border: 1px solid var(--lcars-red-bright);
 	border-radius: 12px;
-	color: var(--lcars-red);
+	color: var(--lcars-red-bright);
 	letter-spacing: 0.1em;
 	font-weight: bold;
 }
